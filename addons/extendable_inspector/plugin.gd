@@ -1,4 +1,4 @@
-tool
+@tool
 extends EditorPlugin
 
 const ExtendableInspectorPlugin = preload("./core/extendable_inspector_plugin.gd")

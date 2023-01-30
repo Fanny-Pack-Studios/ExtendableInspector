@@ -1,12 +1,12 @@
-tool
-extends Spatial
+@tool
+extends Node3D
 
-export(float) var radius = 5
-export(float) var height = 10
-export(float) var amount_of_points = 10
+@export var radius: float = 5
+@export var height: float = 10
+@export var amount_of_points: float = 10
 var path
 
-func draw_espiral():
+func draw_espiral(params):
 	var curve: Curve3D = _path().curve
 	curve.clear_points()
 	var angle = 0
@@ -21,12 +21,12 @@ func draw_espiral():
 		y += (height / amount_of_points)
 
 func _path():
-	if(not has_node("Path")):
-		path = Path.new()
+	if(not has_node("Path3D")):
+		path = Path3D.new()
 		add_child(path)
 		path.owner = get_tree().get_edited_scene_root()
 	else:
-		path = get_node("Path")
+		path = get_node("Path3D")
 	return path
 
 func _extend_inspector_begin(inspector: ExtendableInspector):

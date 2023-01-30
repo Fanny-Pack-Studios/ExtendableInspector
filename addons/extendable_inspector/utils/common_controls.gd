@@ -18,5 +18,5 @@ func labeled_button(text) -> InspectorButton:
 
 func method_button(method_name, params = []) -> InspectorButton:
 	var button = labeled_button(method_name.capitalize())
-	button.connect("pressed", inspector.object, method_name, params)
+	button.pressed.connect(Callable(inspector.object,method_name).bind(params))
 	return button

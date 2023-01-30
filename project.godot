@@ -6,32 +6,17 @@
 ;   [section] ; section goes between []
 ;   param=value ; assign values to parameters
 
-config_version=4
-
-_global_script_classes=[ {
-"base": "Object",
-"class": "CommonControls",
-"language": "GDScript",
-"path": "res://addons/extendable_inspector/utils/common_controls.gd"
-}, {
-"base": "EditorInspectorPlugin",
-"class": "ExtendableInspector",
-"language": "GDScript",
-"path": "res://addons/extendable_inspector/core/extendable_inspector_plugin.gd"
-} ]
-_global_script_class_icons={
-"CommonControls": "",
-"ExtendableInspector": ""
-}
+config_version=5
 
 [application]
 
 config/name="ExtendableInspector"
+config/features=PackedStringArray("4.0")
 config/icon="res://icon.png"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/extendable_inspector/plugin.cfg" )
+enabled=PackedStringArray("res://addons/extendable_inspector/plugin.cfg")
 
 [gui]
 

@@ -1,13 +1,12 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://nbk15saojaqj"]
 
-[ext_resource path="res://addons/extendable_inspector/example/ChangeRandomColor/ChangeRandomColor.gd" type="Script" id=1]
+[ext_resource type="Script" path="res://addons/extendable_inspector/example/ChangeRandomColor/ChangeRandomColor.gd" id="1"]
 
+[sub_resource type="StandardMaterial3D" id="1"]
+albedo_color = Color(0.288615, 0.0106131, 0.404076, 1)
 
-[sub_resource type="SpatialMaterial" id=1]
-albedo_color = Color( 0.010749, 0.0470198, 0.454917, 1 )
+[node name="ChangeRandomColor" type="Node3D"]
+script = ExtResource("1")
 
-[node name="ChangeRandomColor" type="Spatial"]
-script = ExtResource( 1 )
-
-[node name="CSGBox" type="CSGBox" parent="."]
-material = SubResource( 1 )
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+material = SubResource("1")
