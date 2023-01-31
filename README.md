@@ -45,3 +45,9 @@ Allows adding property-specific editors to the property list for object. The add
 
 ## Examples
 
+Examples can be found in the [example folder](https://github.com/Fanny-Pack-Studios/ExtendableInspector/tree/godot-4/addons/extendable_inspector/example)
+
+## Utils
+
+This plugin has a core folder that adds the functionality to let you extend the inspector with any custom control you define from your own scripts.
+Apart from that, there's a `utils` folder that defines some already made controls that can be added to the inspector.
