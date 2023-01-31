@@ -1,4 +1,4 @@
-:x: The README for this project has some errors because the example code is for the godot-4 version :x:
+:x: The README for this project has some errors because the example code is for the godot-4 version, for the time being check that branch instead :x:
 
 # Extendable Inspector
 
