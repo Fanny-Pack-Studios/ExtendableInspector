@@ -1,4 +1,6 @@
-# Extendable Inspector
+# Extendable Inspector for Godot 3.5
+
+For Godot 4 check https://github.com/Fanny-Pack-Studios/ExtendableInspector/tree/godot-4
 
 Makes it easier to add custom inspector controls to nodes.
 
