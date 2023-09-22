@@ -12,6 +12,16 @@ Download the project and copy the addon folder into your godot project.
 
 Go to Project Settings > Plugins, and enable Extendable Inspector.
 
+# Quick Start / Tutorial
+
+Let's add a button that prints the node name in godot's output:
+- Choose the node that should have this control, make sure its script has the `@tool` annotation at the beginning, [this allows it to run code while in the editor](https://docs.godotengine.org/en/stable/tutorials/plugins/running_code_in_the_editor.html).
+![image](https://github.com/Fanny-Pack-Studios/ExtendableInspector/assets/11432672/7c84f2c1-e64f-40ee-a3f0-ef6f858eb78f)
+- Define a method called `_extend_inspector_begin` that receives a parameter, let's call that parameter `inspector`. If you want, you can type it as `ExtendableInspector` to get some autocomplete features:
+![image](https://github.com/Fanny-Pack-Studios/ExtendableInspector/assets/11432672/65f90976-adeb-4607-9d58-46fa214c2f0f)
+- Create a button that when pressed, it prints the node's name. Then, simply add it to the inspector with `inspector.add_custom_control(a_control)`. You will have to unfocus the node and focus it again for the button to appear:
+![image](https://github.com/Fanny-Pack-Studios/ExtendableInspector/assets/11432672/2d4e62ef-7dcf-4cc5-b74c-c26bde55c70a)
+
 # How to use
 
 What this plugin does is allow extending the inspector by declaring some methods in the script for which you want to add custom extensions to the inspector.
