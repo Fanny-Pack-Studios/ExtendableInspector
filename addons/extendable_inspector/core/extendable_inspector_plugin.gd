@@ -20,7 +20,6 @@ func _can_handle(an_object):
 	return false
 
 func _parse_begin(_object):
-	print("parse begin")
 	if(object.has_method("_extend_inspector_begin")):
 		object._extend_inspector_begin(self)
 
@@ -32,7 +31,7 @@ func _parse_category(_object, category: String):
 	if(object.has_method("_extend_inspector_category")):
 		object._extend_inspector_category(self, category)
 
-func _parse_property(object: Object, type: int, name: String, hint_type: int, hint_string: String, usage_flags: int, wide: bool) -> bool:
+func _parse_property(object: Object, type: Variant.Type, name: String, hint_type: PropertyHint, hint_string: String, usage_flags: int, wide: bool) -> bool:
 	if(object.has_method("_extend_inspector_property")):
 		return object._extend_inspector_property(self, type, name, hint_type, hint_string, usage_flags, wide) 
 	return false

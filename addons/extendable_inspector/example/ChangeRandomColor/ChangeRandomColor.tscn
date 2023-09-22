@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://addons/extendable_inspector/example/ChangeRandomColor/ChangeRandomColor.gd" id="1"]
 
 [sub_resource type="StandardMaterial3D" id="1"]
-albedo_color = Color(0.288615, 0.0106131, 0.404076, 1)
+albedo_color = Color(0.0596198, 0.480744, 0.354696, 1)
 
 [node name="ChangeRandomColor" type="Node3D"]
 script = ExtResource("1")

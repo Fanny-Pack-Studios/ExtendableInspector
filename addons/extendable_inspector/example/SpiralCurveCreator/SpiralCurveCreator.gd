@@ -6,7 +6,7 @@ extends Node3D
 @export var amount_of_points: float = 10
 var path
 
-func draw_espiral(params):
+func draw_espiral():
 	var curve: Curve3D = _path().curve
 	curve.clear_points()
 	var angle = 0
