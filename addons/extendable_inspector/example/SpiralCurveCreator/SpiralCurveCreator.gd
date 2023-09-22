@@ -30,8 +30,7 @@ func _path():
 	return path
 
 func _extend_inspector_begin(inspector: ExtendableInspector):
-	var common_controls = CommonControls.new(inspector)
-	inspector.add_custom_control(
-		common_controls.method_button("draw_espiral")
-	)
+	var draw_espiral_button =\
+		CommonControls.new(inspector).method_button("draw_espiral")
 
+	inspector.add_custom_control(draw_espiral_button)
