@@ -22,6 +22,20 @@ Let's add a button that prints the node name in godot's output:
 - Create a button that when pressed, it prints the node's name. Then, simply add it to the inspector with `inspector.add_custom_control(a_control)`. You will have to unfocus the node and focus it again for the button to appear:
 ![image](https://github.com/Fanny-Pack-Studios/ExtendableInspector/assets/11432672/2d4e62ef-7dcf-4cc5-b74c-c26bde55c70a)
 
+Here's the entire code in case you want to try it out:
+
+```godot
+@tool
+
+extends Node2D
+
+func _extend_inspector_begin(inspector: ExtendableInspector):
+  var button = Button.new()
+  button.text = "Say your name"
+  button.pressed.connect(func(): print(self.name))
+
+  inspector.add_custom_control(button)
+```
 
 
 # How to use
