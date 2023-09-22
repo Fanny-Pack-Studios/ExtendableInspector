@@ -2,8 +2,6 @@
 class_name ExtendableInspector
 extends EditorInspectorPlugin
 
-const InspectorButton = preload("res://addons/extendable_inspector/utils/inspector_button.gd")
-
 var object
 
 func _can_handle(an_object):
